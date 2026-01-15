@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SevaHub</title>
+  <link rel="stylesheet" href="home.css">
+  <script>
+    function setVH() {
+      let vh = window.innerHeight * 0.01;
+      document.documentElement.style.setProperty('--vh', `${vh}px`);
+    }
+    setVH();
+    window.addEventListener('resize', setVH);
+  </script>
+</head>
+
+<body>
+  <div class="home">
+    <div class="hero fadeIn">
+      <h1>SevaHub</h1>
+      <p class="tagline">India’s most trusted local services platform</p>
+    </div>
+    <div class="trust fadeIn">
+      <p>✔ 100% Verified Professionals</p>
+      <p>✔ Safe & Transparent Pricing</p>
+      <p>✔ No Fraud • No Middlemen</p>
+    </div>
+    <div class="enter fadeIn" onclick="goHome()">
+      Let’s enjoy services without any hassle →
+    </div>
+    <div class="arrow fadeIn">&#8595;</div>
+    <p class="info fadeIn">Trusted by 1000+ households across India</p>
+  </div>
+  <script>
+    function goHome() {
+      window.location.href = "home.html";
+    }
+  </script>
+
+</body>
+
+</html>

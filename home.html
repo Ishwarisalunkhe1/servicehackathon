@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>SevaHub</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <div class="top-bar">
+    <a href="index.html" class="back-arrow">←</a>
+    <h1>SevaHub-Your goto hub for local services</h1>
+    <input type="text" id="searchBox" placeholder="Search services like Cleaning, Salon, Tutor...">
+  </div>
+
+  <div class="filters">
+    <select id="categoryFilter">
+      <option value="">All Categories</option>
+      <option>Electrician</option>
+      <option>Plumber</option>
+      <option>Cleaning</option>
+      <option>Cooking</option>
+      <option>Tutor</option>
+      <option>Salon</option>
+    </select>
+
+    <select id="locationFilter">
+      <option value="">All Locations</option>
+      <option>Andheri</option>
+      <option>Borivali</option>
+      <option>Dadar</option>
+      <option>Kurla</option>
+    </select>
+
+    <select id="statusFilter">
+      <option value="">All Status</option>
+      <option>Available</option>
+      <option>Busy</option>
+      <option>Offline</option>
+    </select>
+  </div>
+
+  <p id="message"></p>
+
+  <div id="services" class="cards"></div>
+
+  <script src="data.js"></script>
+  <script src="script.js"></script>
+
+  <footer class="footer">
+    <p class="coming">More services coming soon 🚀</p>
+    <img src="favicon.png" style="width:180px; opacity:0.6; margin-bottom:5px;">
+    <p class="copyright">
+      © 2026 SevaHub. All rights reserved.
+    </p>
+  </footer>
+  <script>
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 20) {
+        document.body.classList.add("scrolled");
+      } else {
+        document.body.classList.remove("scrolled");
+      }
+    });
+  </script>
+
+</body>
+
+</html>
